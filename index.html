@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <div class="superior">
+      <h1>Adivina el color</h1>
+      <h2>Reglas:</h2>
+      <p class="reglas">
+        En la parte superior se muestra un código RGB, debes hacer click en el
+        cuadrado de la parte inferior que corresponda al código RBG mostrado.
+        Deberás acertar 3 veces para ganar o fallar 3 para perder
+      </p>
+      <h2 class="marcador">Marcador</h2>
+      <ul class="marcador">
+        <li >Aciertos: <span id="aciertos"></span></li>
+        <li >Fallos: <span id="fallos"></span></li>
+      </ul>
+      <h3 id="rgb"></h3>
+    </div>
+    <div class="inferior">
+      <ul class="cuadrados">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <footer>
+      <p>Equipo A</p>
+    </footer>
+  </body>
+</html>
