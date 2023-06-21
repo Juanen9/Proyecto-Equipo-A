@@ -59,7 +59,7 @@ function numeroRandom() {
 
   arrayColores.push(`rgb(${Math.round(num1 / 1.3)},${Math.round(num2 / 1.3)},${num3})`);
 
-  arrayColores.push(`rgb(${num1},${Math.round(num2 / 1.3)},${num3 + 50})`);
+  arrayColores.push(`rgb(${num1},${Math.round(num2 / 1.3)},${num3})`);
 
   return arrayColores;
 }
@@ -79,6 +79,7 @@ function asignarColores() {
   for (let i = 0; i < casillas.length; i++) {
     if (i === casillaRandom) {
       casillas[i].style.backgroundColor = arrayColores[i];
+      console.log(i);
     } else {
       casillas[i].style.backgroundColor = arrayColores[i];
 
@@ -108,12 +109,14 @@ for (let i = 0; i < casillas.length; i++) {
         title: 'Has ganado!',
         text: 'Felicitaciones por tu victoria!!!',
         icon: 'success',
-        showConfirmButton: false
-      });
-      setTimeout(() => {
-        localStorage.clear();
-        location.reload();
-      },3000);
+        allowOutsideClick: false,
+        showConfirmButton: true
+      }).then((result) => {
+        if(result.isConfirmed){
+          localStorage.clear();
+          location.reload();
+        }
+      })
     }
     
   } 
@@ -135,12 +138,14 @@ for (let i = 0; i < casillas.length; i++) {
         title: 'Has perdido!',
         text: 'No te rindas, vuelve a intentarlo de nuevo!!!',
         icon: 'error',
-        showConfirmButton: false
+        allowOutsideClick: false,
+        showConfirmButton: true,
+      }).then((result) => {
+        if (result.isConfirmed){
+          localStorage.clear();
+          location.reload();
+        }
       });
-      setTimeout(() => {
-        localStorage.clear();
-        location.reload();
-      },3000);
     }
   }
 };
