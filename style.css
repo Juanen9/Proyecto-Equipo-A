@@ -50,6 +50,20 @@ h3 {
   list-style: none;
   background-color: black;
   padding: 2.5rem;
+  border-radius: 15%;
+  border: ridge black 5px;
 }
 
+#rgb{
+  color: white;
+  padding: 4rem;
+  border-radius: 2rem;
+  border: ridge black 5px;
+}
+
+.superior{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5rem;
+}
 
