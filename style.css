@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 :root {
@@ -9,19 +13,66 @@
 
 body {
   background-color: var(--colorPrimario);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header{
+  color: tomato;
+  font-family: 'Lilita One', cursive;
+  margin-bottom: 5rem;
+  background-color: black;
+  background-image: url(./images/equipo.jpeg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: ridge black 10px;
+  padding: 1rem;
+}
+
+.div-btn-info{
+  display: flex;
+  justify-content: end;
+}
+
+.btn_info{
+  background-image: url(/images/info.png);
+  padding: 1rem;
+  background-size: cover;
+  border-radius: 2rem;
+}
+
+.aciertos{
+  margin-bottom: 0.3rem;
+  list-style-image: url(./images/acierto.png);
+}
+
+.fallos{
+  list-style-image: url(./images/fallo.png);
+}
+
+main{
+  flex-grow: 1;
 }
 
 h1 {
   font-size: 6rem;
   text-align: center;
-  color: var(--colorSecundario);
+  color: rgb(255, 0, 30);
   text-decoration: underline;
 }
 h2 {
   text-decoration: underline;
+  margin-bottom: 1rem;
 }
 h3 {
   text-align: center;
+}
+
+footer{
+  background-color: black;
+  color: white;
+  padding: 0;
 }
 
 .reglas {
@@ -32,6 +83,10 @@ h3 {
 }
 .marcador {
   list-style: none;
+  background-color: tomato;
+  padding: 2.5rem;
+  border-radius: 15%;
+  border: ridge black 5px;
 }
 
 .inferior {
@@ -44,12 +99,74 @@ h3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
+  margin-bottom: 5rem;
 }
 
 .cuadrados li {
   list-style: none;
   background-color: black;
   padding: 2.5rem;
+  border-radius: 15%;
+  border: ridge black 5px;
 }
 
+#rgb{
+  color: white;
+  padding: 4rem;
+  border-radius: 2rem;
+  border: ridge black 5px;
+}
 
+.superior{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5rem;
+}
+
+#rgb{
+  color: white;
+  padding: 4rem;
+  border-radius: 2rem;
+  border: ridge black 5px;
+}
+
+.superior{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5rem;
+}
+
+.fotter-p{
+  margin-left: 1rem;
+}
+
+.message-container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+.message {
+  display: none;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  animation:  4s ease-in-out;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
