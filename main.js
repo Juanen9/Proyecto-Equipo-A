@@ -14,7 +14,26 @@ const proba1 = document.getElementById("proba1");
 
 const animacion = document.getElementById("animacion");
 
+const btnInfo = document.querySelector(".btn_info");
+
+const mensajeContenedor = document.querySelector(".message-container");
+
+const infoMensaje = document.querySelector(".message");
+
 const arrayColores = [];
+
+
+btnInfo.addEventListener("click",() => {
+  if(mensajeContenedor.style.display === "none"){
+  mensajeContenedor.style.display = "block";
+  infoMensaje.style.display = "block"
+  }else{
+    mensajeContenedor.style.display = "none";
+    infoMensaje.style.display = "none";
+  }
+});
+
+
 
 //Solo carga en la sesión actual.
 if (!sessionStorage.getItem('swalShown')) {
@@ -22,6 +41,10 @@ if (!sessionStorage.getItem('swalShown')) {
   setTimeout(() => {
     Swal.fire({
       title: 'Bienvenidos al desafio RGB del Equipo-A, pulse `OK` para empezar.',
+      titletext : "Reglas",
+      text: `En la parte superior se muestra un código RGB, debes hacer click en el
+      cuadrado de la parte inferior que corresponda al código RBG mostrado.
+      Deberás acertar 3 veces para ganar o fallar 3 para perder.` ,
       text: `En la parte superior se muestra un código RGB, debes hacer click en el
       cuadrado de la parte inferior que corresponda al código RBG mostrado.
       Deberás acertar 3 veces para ganar o fallar 3 para perder.`,
@@ -151,7 +174,6 @@ for (let i = 0; i < casillas.length; i++) {
     }
   }
 };
-
 
 
 
