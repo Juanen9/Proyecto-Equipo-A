@@ -45,9 +45,6 @@ if (!sessionStorage.getItem('swalShown')) {
       text: `En la parte superior se muestra un código RGB, debes hacer click en el
       cuadrado de la parte inferior que corresponda al código RBG mostrado.
       Deberás acertar 3 veces para ganar o fallar 3 para perder.` ,
-      text: `En la parte superior se muestra un código RGB, debes hacer click en el
-      cuadrado de la parte inferior que corresponda al código RBG mostrado.
-      Deberás acertar 3 veces para ganar o fallar 3 para perder.`,
       imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/d/d0/A-Team-Logo.svg',
       imageWidth: 400,
       imageHeight: 200,
