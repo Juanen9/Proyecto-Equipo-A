@@ -16,6 +16,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 header {
@@ -105,6 +106,7 @@ footer {
 }
 
 .cuadrados {
+  z-index: 1;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
@@ -132,13 +134,27 @@ footer {
   z-index: 9999;
 }
 
+.info-title{
+  color: yellow;
+  text-decoration: underline;
+  margin-bottom: 1rem;
+  font-size: 25px;
+}
+
+.footer-info{
+  margin-top: 2rem;
+}
+
 .message {
+  font-family: "Lilita One", cursive;
   display: none;
-  background-color: #f2f2f2;
+  background-color: black;
   padding: 20px;
   border-radius: 5px;
   font-size: 18px;
   animation: 4s ease-in-out;
+  text-align: center;
+  color: rgb(255, 0, 30);
 }
 
 @keyframes fadeOut {
@@ -154,9 +170,41 @@ footer {
   }
 }
 
+@media (min-width: 320px){
+  .publi-aside-img{
+    display: none;
+    width: 100vw;
+    margin-left: 3rem;
+    position: absolute;
+  }
+ 
+  .publi-aside-video{
+    display: none;
+    width: 100vw;
+    margin-right: 2rem;
+    position: absolute;
+    margin-bottom: 5rem;
+  }
+}
+
 @media (min-width: 375px) {
   header {
     background-size: 5.5rem;
+  }
+
+  .publi-aside-img{
+    display: none;
+    width: 100vw;
+    margin-left: 3rem;
+    position: absolute;
+  }
+ 
+  .publi-aside-video{
+    display: none;
+    width: 100vw;
+    margin-right: 2rem;
+    position: absolute;
+    margin-bottom: 5rem;
   }
 }
 
@@ -170,6 +218,21 @@ footer {
   .marcador {
     padding: 1rem 2.5rem;
   }
+  .publi-aside-img{
+    display: none;
+    width: 100vw;
+    margin-left: 3rem;
+    position: absolute;
+  }
+ 
+  .publi-aside-video{
+    display: none;
+    width: 100vw;
+    margin-right: 2rem;
+    position: absolute;
+    margin-bottom: 5rem;
+  }
+
 }
 
 @media (min-width: 768px) {
@@ -188,6 +251,30 @@ footer {
   }
   .cuadrados li {
     padding: 2.5rem;
+  }
+
+  .publi-aside-img{
+    display: block;
+    width: 100vw;
+    margin-left: 3rem;
+    position: absolute;
+  }
+  .publi-aside-img img{
+    width: 10rem;
+    float: left;
+  }
+  
+  .publi-aside-video{
+    display: block;
+    width: 100vw;
+    margin-right: 2rem;
+    position: absolute;
+    margin-bottom: 5rem;
+  }
+  .publi-aside-video video{
+    height: 15rem;
+    width: 10rem;
+    float: right;
   }
 }
 
@@ -217,7 +304,31 @@ footer {
   .cuadrados li {
     padding: 3rem;
   }
+
+  .publi-aside-img{
+    width: 100vw;
+    margin-left: 3rem;
+    position: absolute;
+  }
+  .publi-aside-img img{
+    width: 15rem;
+    float: left;
+  }
+  
+  .publi-aside-video{
+    width: 100vw;
+    margin-right: 2rem;
+    position: absolute;
+    margin-bottom: 5rem;
+  }
+  .publi-aside-video video{
+    height: 20rem;
+    width: 15rem;
+    float: right;
+  } 
 }
+
+
 
 @media (min-width: 1440px) {
   header {
@@ -247,6 +358,28 @@ footer {
   .cuadrados li {
     padding: 3.5rem;
   }
+  .publi-aside-img{
+    width: 100vw;
+    margin-left: 5rem;
+    position: absolute;
+  }
+  .publi-aside-img img{
+    width: 20rem;
+    float: left;
+  }
+
+  .publi-aside-video{
+    width: 100vw;
+    margin-right: 5rem;
+    position: absolute;
+    margin-bottom: 5rem;
+  }
+  .publi-aside-video video{
+    height: 25rem;
+    width: 20rem;
+    float: right;
+  }
+  
 }
 
 @media (min-width: 2560px) {
@@ -276,6 +409,29 @@ footer {
     padding: 4.75rem 1rem;
   }
   .cuadrados li {
-    padding: 4.25rem;
+    margin-top: 3rem;
+    padding: 6rem;
+  }
+
+  .publi-aside-img{
+    width: 100vw;
+    margin-left: 10rem;
+    position: absolute;
+  }
+  .publi-aside-img img{
+    width: 30rem;
+    float: left;
+  }
+
+  .publi-aside-video{
+    width: 100vw;
+    margin-right: 10rem;
+    position: absolute;
+    margin-bottom: 5rem;
+  }
+  .publi-aside-video video{
+    height: 35rem;
+    width: 30rem;
+    float: right;
   }
 }
