@@ -22,7 +22,6 @@ const infoMensaje = document.querySelector(".message");
 
 const arrayColores = [];
 
-
 btnInfo.addEventListener("click",() => {
   if(mensajeContenedor.style.display === "none"){
   mensajeContenedor.style.display = "block";
@@ -41,7 +40,6 @@ if (!sessionStorage.getItem('swalShown')) {
   setTimeout(() => {
     Swal.fire({
       title: 'Bienvenidos al desafio RGB del Equipo-A, pulse `OK` para empezar.',
-      titletext : "Reglas",
       text: `En la parte superior se muestra un código RGB, debes hacer click en el
       cuadrado de la parte inferior que corresponda al código RBG mostrado.
       Deberás acertar 3 veces para ganar o fallar 3 para perder.` ,
@@ -89,6 +87,8 @@ function numeroRandom() {
 //Ejecutamos la función.
 numeroRandom();
 
+
+
 //Asignamos a la variable "casillaRandom" un número aleatorio entre 0 y 9.
 const casillaRandom = Math.floor(Math.random() * casillas.length);
 
@@ -101,16 +101,15 @@ function asignarColores() {
   for (let i = 0; i < casillas.length; i++) {
     if (i === casillaRandom) {
       casillas[i].style.backgroundColor = arrayColores[i];
-      console.log(i);
     } else {
       casillas[i].style.backgroundColor = arrayColores[i];
-
     }
   }
 }
 
 //Ejecutamos la función.
 asignarColores();
+
 
 
 for (let i = 0; i < casillas.length; i++) {
