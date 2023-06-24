@@ -28,8 +28,8 @@ const infoMensaje = document.querySelector(".message");
 
 // const casillasFacil = document.querySelectorAll(".facil");
 
-
 const arrayColores = [];
+
 
 
 btnInfo.addEventListener("click",() => {
@@ -77,17 +77,17 @@ function numeroRandom() {
 
   arrayColores.push(`rgb(${Math.round(num1 / 1.3)},${num2},${num3})`);
 
-  arrayColores.push(`rgb(${num1},${Math.abs(Math.round(num2 / 1.3))},${num3})`);
+//   arrayColores.push(`rgb(${num1},${Math.abs(Math.round(num2 / 1.3))},${num3})`);
 
   arrayColores.push(`rgb(${num1},${Math.round(num2 / 1.3)},${num3})`);
 
   arrayColores.push(`rgb(${num1},${num2},${Math.round(num3 / 1.3)})`);
 
-  arrayColores.push(`rgb(${num1},${num2},${Math.round(num3 / 1.3)})`);
+//   arrayColores.push(`rgb(${num1},${num2},${Math.round(num3 / 1.3)})`);
 
   arrayColores.push(`rgb(${num1},${num2},${num3})`);
 
-  arrayColores.push(`rgb(${Math.round(num1 / 1.3)},${Math.round(num2 / 1.3)},${num3})`);
+//   arrayColores.push(`rgb(${Math.round(num1 / 1.3)},${Math.round(num2 / 1.3)},${num3})`);
 
   arrayColores.push(`rgb(${num1},${Math.round(num2 / 1.3)},${num3})`);
 
@@ -106,6 +106,7 @@ const casillaRandom = Math.floor(Math.random() * casillas.length);
 const colorRgb = (codigoRgb.textContent = arrayColores[casillaRandom]);
 codigoRgb.style.backgroundColor = arrayColores[casillaRandom];
 
+
 //Con esta función asignamos los colores a la paleta RGB y a las casillas.
 function asignarColores() {
   for (let i = 0; i < casillas.length; i++) {
@@ -114,6 +115,7 @@ function asignarColores() {
     } else {
       casillas[i].style.backgroundColor = arrayColores[i];
     }
+    console.log(casillas[i].style.backgroundColor)
   }
 }
 
