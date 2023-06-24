@@ -43,12 +43,12 @@ header {
   border-radius: 2rem;
 }
 
-.btn-easy{
+.btn-easy {
   display: flex;
   justify-content: end;
 }
 
-.btn-normal{
+.btn-normal {
   display: flex;
   justify-content: end;
 }
@@ -85,36 +85,35 @@ h3 {
 footer {
   background-color: black;
   color: white;
- padding: 0.5rem;
+  padding: 0.5rem;
 }
 
-.div-footer{
+.div-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.div-footer ul{
+.div-footer ul {
   display: flex;
   margin-right: 1rem;
   gap: 1rem;
   align-items: center;
 }
 
-.div-footer ul li{
+.div-footer ul li {
   list-style: none;
-
 }
 
-.git-image{
+.git-image {
   width: 1.5rem;
 }
 
-.linkedin-image{
+.linkedin-image {
   width: 1.5rem;
 }
 
-.youtube-image{
+.youtube-image {
   width: 1.5rem;
 }
 
@@ -174,14 +173,14 @@ footer {
   z-index: 9999;
 }
 
-.info-title{
+.info-title {
   color: yellow;
   text-decoration: underline;
   margin-bottom: 1rem;
   font-size: 25px;
 }
 
-.footer-info{
+.footer-info {
   margin-top: 2rem;
 }
 
@@ -210,22 +209,21 @@ footer {
   }
 }
 
-@media (min-width: 320px){
-  .publi-aside-img{
+@media (min-width: 320px) {
+  .publi-aside-img {
     display: none;
     width: 100vw;
     margin-left: 3rem;
     position: absolute;
   }
- 
-  .publi-aside-video{
+
+  .publi-aside-video {
     display: none;
     width: 100vw;
     margin-right: 2rem;
     position: absolute;
     margin-bottom: 5rem;
   }
-  
 }
 
 @media (min-width: 375px) {
@@ -233,14 +231,14 @@ footer {
     background-size: 5.5rem;
   }
 
-  .publi-aside-img{
+  .publi-aside-img {
     display: none;
     width: 100vw;
     margin-left: 3rem;
     position: absolute;
   }
- 
-  .publi-aside-video{
+
+  .publi-aside-video {
     display: none;
     width: 100vw;
     margin-right: 2rem;
@@ -259,21 +257,20 @@ footer {
   .marcador {
     padding: 1rem 2.5rem;
   }
-  .publi-aside-img{
+  .publi-aside-img {
     display: none;
     width: 100vw;
     margin-left: 3rem;
     position: absolute;
   }
- 
-  .publi-aside-video{
+
+  .publi-aside-video {
     display: none;
     width: 100vw;
     margin-right: 2rem;
     position: absolute;
     margin-bottom: 5rem;
   }
-
 }
 
 @media (min-width: 768px) {
@@ -294,25 +291,25 @@ footer {
     padding: 2.5rem;
   }
 
-  .publi-aside-img{
+  .publi-aside-img {
     display: block;
     width: 100vw;
     margin-left: 3rem;
     position: absolute;
   }
-  .publi-aside-img img{
+  .publi-aside-img img {
     width: 10rem;
     float: left;
   }
-  
-  .publi-aside-video{
+
+  .publi-aside-video {
     display: block;
     width: 100vw;
     margin-right: 2rem;
     position: absolute;
     margin-bottom: 5rem;
   }
-  .publi-aside-video video{
+  .publi-aside-video video {
     height: 15rem;
     width: 10rem;
     float: right;
@@ -346,30 +343,28 @@ footer {
     padding: 3rem;
   }
 
-  .publi-aside-img{
+  .publi-aside-img {
     width: 100vw;
     margin-left: 3rem;
     position: absolute;
   }
-  .publi-aside-img img{
+  .publi-aside-img img {
     width: 15rem;
     float: left;
   }
-  
-  .publi-aside-video{
+
+  .publi-aside-video {
     width: 100vw;
     margin-right: 2rem;
     position: absolute;
     margin-bottom: 5rem;
   }
-  .publi-aside-video video{
+  .publi-aside-video video {
     height: 20rem;
     width: 15rem;
     float: right;
-  } 
+  }
 }
-
-
 
 @media (min-width: 1440px) {
   header {
@@ -399,44 +394,43 @@ footer {
   .cuadrados li {
     padding: 3.5rem;
   }
-  .publi-aside-img{
+  .publi-aside-img {
     width: 100vw;
     margin-left: 5rem;
     position: absolute;
   }
-  .publi-aside-img img{
+  .publi-aside-img img {
     width: 20rem;
     float: left;
   }
 
-  .publi-aside-video{
+  .publi-aside-video {
     width: 100vw;
     margin-right: 5rem;
     position: absolute;
     margin-bottom: 5rem;
   }
-  .publi-aside-video video{
+  .publi-aside-video video {
     height: 25rem;
     width: 20rem;
     float: right;
   }
 
-  .git-image{
+  .git-image {
     width: 2rem;
   }
-  
-  .linkedin-image{
+
+  .linkedin-image {
     width: 2rem;
   }
-  
-  .youtube-image{
+
+  .youtube-image {
     width: 2rem;
   }
-  
+
   .footer-p {
     font-size: 1.2rem;
   }
-  
 }
 
 @media (min-width: 2560px) {
@@ -470,40 +464,40 @@ footer {
     padding: 6rem;
   }
 
-  .publi-aside-img{
+  .publi-aside-img {
     width: 100vw;
     margin-left: 10rem;
     position: absolute;
   }
-  .publi-aside-img img{
+  .publi-aside-img img {
     width: 30rem;
     float: left;
   }
 
-  .publi-aside-video{
+  .publi-aside-video {
     width: 100vw;
     margin-right: 10rem;
     position: absolute;
     margin-bottom: 5rem;
   }
-  .publi-aside-video video{
+  .publi-aside-video video {
     height: 35rem;
     width: 30rem;
     float: right;
   }
 
-  .git-image{
+  .git-image {
     width: 3rem;
   }
-  
-  .linkedin-image{
+
+  .linkedin-image {
     width: 3rem;
   }
-  
-  .youtube-image{
+
+  .youtube-image {
     width: 3rem;
   }
-  
+
   .footer-p {
     font-size: 2rem;
   }
