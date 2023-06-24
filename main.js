@@ -14,12 +14,15 @@ const proba1 = document.getElementById("proba1");
 
 const animacion = document.getElementById("animacion");
 
+<<<<<<< HEAD
 const btnInfo = document.querySelector(".btn_info");
 
 const mensajeContenedor = document.querySelector(".message-container");
 
 const infoMensaje = document.querySelector(".message");
 
+=======
+>>>>>>> bebe8710863317a233ebde4aee5c49b9fb6b3e89
 const arrayColores = [];
 
 btnInfo.addEventListener("click",() => {
@@ -109,18 +112,26 @@ function asignarColores() {
 
 //Ejecutamos la función.
 asignarColores();
+<<<<<<< HEAD
 
 
+=======
+aciertos.textContent === "0";
+//Añadimos
+
+console.log(aciertos.textContent);
+>>>>>>> bebe8710863317a233ebde4aee5c49b9fb6b3e89
 
 for (let i = 0; i < casillas.length; i++) {
   if (i === casillaRandom) {
     casillas[i].addEventListener(`click`, (e) => {
       aciertos.textContent++;
       localStorage.setItem("aciertos", aciertos.textContent);
-      location.reload();      
+      location.reload();
     });
     let aciertosGuardados = localStorage.getItem("aciertos");
     aciertos.textContent = aciertosGuardados;
+<<<<<<< HEAD
     if(aciertos.textContent === "1" || aciertos.textContent === "2" || aciertos.textContent === "3"){
       proba.style.display = "none";
     };
@@ -138,18 +149,31 @@ for (let i = 0; i < casillas.length; i++) {
           location.reload();
         }
       })
+=======
+    if (
+      aciertos.textContent === "1" ||
+      aciertos.textContent === "2" ||
+      aciertos.textContent === "3"
+    ) {
+      proba.style.display = "none";
     }
-    
-  } 
-  else {
+
+    if (aciertos.textContent === "3") {
+      localStorage.clear();
+      location.reload();
+      alert("Has ganado");
+>>>>>>> bebe8710863317a233ebde4aee5c49b9fb6b3e89
+    }
+  } else {
     casillas[i].addEventListener(`click`, (e) => {
       fallos.textContent++;
       localStorage.setItem("fallos", fallos.textContent);
       location.reload();
     });
     let fallosGuardados = localStorage.getItem("fallos");
-      fallos.textContent = fallosGuardados;
+    fallos.textContent = fallosGuardados;
 
+<<<<<<< HEAD
       if(fallos.textContent === "1" || fallos.textContent === "2" || fallos.textContent === "3"){
         proba1.style.display = "none";
       };
@@ -173,3 +197,20 @@ for (let i = 0; i < casillas.length; i++) {
 
 
 
+=======
+    if (
+      fallos.textContent === "1" ||
+      fallos.textContent === "2" ||
+      fallos.textContent === "3"
+    ) {
+      proba1.style.display = "none";
+    }
+
+    if (fallos.textContent === "3") {
+      localStorage.clear();
+      location.reload();
+      alert("Has perdido.");
+    }
+  }
+}
+>>>>>>> bebe8710863317a233ebde4aee5c49b9fb6b3e89
