@@ -43,6 +43,16 @@ header {
   border-radius: 2rem;
 }
 
+.btn-easy{
+  display: flex;
+  justify-content: end;
+}
+
+.btn-normal{
+  display: flex;
+  justify-content: end;
+}
+
 .aciertos {
   margin-bottom: 0.3rem;
   list-style-image: url(./images/acierto.png);
@@ -75,7 +85,41 @@ h3 {
 footer {
   background-color: black;
   color: white;
-  padding: 0;
+ padding: 0.5rem;
+}
+
+.div-footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.div-footer ul{
+  display: flex;
+  margin-right: 1rem;
+  gap: 1rem;
+  align-items: center;
+}
+
+.div-footer ul li{
+  list-style: none;
+
+}
+
+.git-image{
+  width: 1.5rem;
+}
+
+.linkedin-image{
+  width: 1.5rem;
+}
+
+.youtube-image{
+  width: 1.5rem;
+}
+
+.footer-p {
+  margin-left: 1rem;
 }
 
 .superior {
@@ -119,10 +163,6 @@ footer {
   padding: 2rem;
   border-radius: 15%;
   border: ridge black 5px;
-}
-
-.fotter-p {
-  margin-left: 1rem;
 }
 
 .message-container {
@@ -185,6 +225,7 @@ footer {
     position: absolute;
     margin-bottom: 5rem;
   }
+  
 }
 
 @media (min-width: 375px) {
@@ -379,6 +420,22 @@ footer {
     width: 20rem;
     float: right;
   }
+
+  .git-image{
+    width: 2rem;
+  }
+  
+  .linkedin-image{
+    width: 2rem;
+  }
+  
+  .youtube-image{
+    width: 2rem;
+  }
+  
+  .footer-p {
+    font-size: 1.2rem;
+  }
   
 }
 
@@ -433,5 +490,21 @@ footer {
     height: 35rem;
     width: 30rem;
     float: right;
+  }
+
+  .git-image{
+    width: 3rem;
+  }
+  
+  .linkedin-image{
+    width: 3rem;
+  }
+  
+  .youtube-image{
+    width: 3rem;
+  }
+  
+  .footer-p {
+    font-size: 2rem;
   }
 }
