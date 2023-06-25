@@ -1,5 +1,7 @@
 "use strict";
 
+//Asignamos variables.
+
 const aciertos = document.getElementById("acierto");
 
 const fallos = document.getElementById("fallo");
@@ -18,9 +20,10 @@ const infoMensaje = document.querySelector(".message");
 
 const botonDificultad = document.querySelector(".dificultad");
 
-// const casillasFacil = document.querySelectorAll(".facil");
-
+//Array de colores.
 const arrayColores = [];
+
+//Si en el localStorage la propiedad texto tiene el valor null asignado guardamos los siguientes valores y propiedades.
 if (localStorage.getItem("texto") == null) {
   localStorage.setItem("dificultad", 6);
   localStorage.setItem("clicks", 1);
@@ -67,15 +70,14 @@ if (!sessionStorage.getItem("swalShown")) {
       text: `En la parte superior se muestra un código RGB, debes hacer click en el
       cuadrado de la parte inferior que corresponda al código RBG mostrado.
       Deberás acertar 3 veces para ganar o fallar 3 para perder.`,
-      imageUrl:
-        "https://upload.wikimedia.org/wikipedia/commons/d/d0/A-Team-Logo.svg",
+      imageUrl:"https://upload.wikimedia.org/wikipedia/commons/d/d0/A-Team-Logo.svg",
       imageWidth: 400,
       imageHeight: 200,
       imageAlt: "Imagen Equipo-A",
     });
     // Establecer el indicador de que el swal ya se ha mostrado.
     sessionStorage.setItem("swalShown", "true");
-  }, 500);
+  }, 800);
 }
 
 //funcion que saca un código rgb
