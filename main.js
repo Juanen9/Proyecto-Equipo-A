@@ -1,6 +1,6 @@
 "use strict";
 
-//Asignamos variables.
+//Declaración de variables.
 
 const aciertos = document.getElementById("acierto");
 
@@ -20,7 +20,7 @@ const infoMensaje = document.querySelector(".message");
 
 const botonDificultad = document.querySelector(".dificultad");
 
-//Array de colores.
+//Array vacío para introducir colores.
 const arrayColores = [];
 
 //Si en el localStorage la propiedad texto tiene el valor null asignado guardamos los siguientes valores y propiedades.
@@ -32,6 +32,8 @@ if (localStorage.getItem("texto") == null) {
   localStorage.setItem("aciertos", 0);
 }
 
+
+//Asignación del texto al botón, el contador de clicks(para determinar la dificultad) yel nivel de dificultad.
 botonDificultad.textContent = localStorage.getItem("texto");
 let clickCount = localStorage.getItem("clicks");
 let dificultad = localStorage.getItem("dificultad");
@@ -43,13 +45,14 @@ botonDificultad.addEventListener("click", () => {
     localStorage.setItem("texto", "Cambiar a difícil");
     location.reload();
   } else {
-    localStorage.setItem("dificultad", 12);
+    localStorage.setItem("dificultad", 9);
     localStorage.setItem("clicks", 2);
-    localStorage.setItem("texto", "Cambiar a fácil");
+    localStorage.setItem("texto", "Cambiar a normal");
     location.reload();
   }
 });
 
+//Botón que nos muestra información adicional al clickar.
 btnInfo.addEventListener("click", () => {
   if (mensajeContenedor.style.display === "none") {
     mensajeContenedor.style.display = "block";
@@ -60,13 +63,13 @@ btnInfo.addEventListener("click", () => {
   }
 });
 
-//Solo carga en la sesión actual.
+//Mensaje de bienvenida, solo carga en la sesión actual.
 if (!sessionStorage.getItem("swalShown")) {
   // Mostrar el mensaje swal.
   setTimeout(() => {
     Swal.fire({
       title:
-        "Bienvenidos al desafio RGB del Equipo-A, pulse `OK` para empezar.",
+        "Bienvenidos al desafío RGB del Equipo-A, pulse `OK` para empezar.",
       text: `En la parte superior se muestra un código RGB, debes hacer click en el
       cuadrado de la parte inferior que corresponda al código RBG mostrado.
       Deberás acertar 3 veces para ganar o fallar 3 para perder.`,
@@ -80,19 +83,19 @@ if (!sessionStorage.getItem("swalShown")) {
   }, 800);
 }
 
-//funcion que saca un código rgb
-
+//Función que saca un código rgb.
 function numeroRandom() {
   const rojo = Math.floor(Math.random() * 256);
   const verde = Math.floor(Math.random() * 256);
   const azul = Math.floor(Math.random() * 256);
-  const rango = 100;
 
+  //Sacar los colores en relación a la dificultad.
   for (let i = 0; i < dificultad; i++) {
     let nuevoRojo = Math.random() * 100 + (rojo - 50);
     let nuevoVerde = Math.random() * 100 + (verde - 50);
     let nuevoAzul = Math.random() * 100 + (azul - 50);
 
+  //Comprobamos que ningún número esté fuera de rango(0-255).
     if (nuevoRojo > 255) {
       nuevoRojo = 255;
     }
@@ -111,14 +114,13 @@ function numeroRandom() {
     if (nuevoAzul < 0) {
       nuevoAzul = 0;
     }
-
+  //Evitamos números decimales.  
     let color = `rgb(${Math.round(nuevoRojo)},${Math.round(
       nuevoAzul
     )},${Math.round(nuevoVerde)})`;
 
-    if (!arrayColores.includes(color)) {
-      arrayColores.push(color);
-    }
+    arrayColores.push(color);
+    
   }
   return arrayColores;
 }
@@ -126,6 +128,7 @@ function numeroRandom() {
 //Ejecutamos la función.
 numeroRandom();
 
+//En función de la dificultad añadimos las casillas.
 function crearLi() {
   for (let i = 0; i < dificultad; i++) {
     cuadrados.appendChild(document.createElement(`li`));
@@ -133,9 +136,10 @@ function crearLi() {
 }
 crearLi();
 
+//Guardamos en una variable el número de casillas.
 const casillas = document.querySelectorAll(".cuadrados li");
 
-//Asignamos a la variable "casillaRandom" un número aleatorio entre 0 y 9.
+//Asignamos a la variable "casillaRandom" un número aleatorio entre 0 y la dificultad.
 const casillaRandom = Math.floor(Math.random() * casillas.length);
 
 //Asignamos codigo y color RGB al apartado RGB.
@@ -156,6 +160,8 @@ function asignarColores() {
 //Ejecutamos la función.
 asignarColores();
 
+
+//Capturas los clicks de las casillas y los guardamos en el marcador y mostramos los mensajes correspondientes.
 for (let i = 0; i < casillas.length; i++) {
   if (i === casillaRandom) {
     casillas[i].addEventListener(`click`, (e) => {
@@ -165,12 +171,6 @@ for (let i = 0; i < casillas.length; i++) {
     });
     let aciertosGuardados = localStorage.getItem("aciertos");
     aciertos.textContent = aciertosGuardados;
-    if (
-      aciertos.textContent === "1" ||
-      aciertos.textContent === "2" ||
-      aciertos.textContent === "3"
-    ) {
-    }
 
     if (aciertos.textContent === "3") {
       Swal.fire({
@@ -194,13 +194,6 @@ for (let i = 0; i < casillas.length; i++) {
     });
     let fallosGuardados = localStorage.getItem("fallos");
     fallos.textContent = fallosGuardados;
-
-    if (
-      fallos.textContent === "1" ||
-      fallos.textContent === "2" ||
-      fallos.textContent === "3"
-    ) {
-    }
 
     if (fallos.textContent === "3") {
       Swal.fire({
