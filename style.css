@@ -9,6 +9,7 @@
 :root {
   --colorPrimario: rgb(250, 250, 175);
   --colorSecundario: rgb(175, 175, 250);
+  --colorH1: rgb(255, 0, 30);
 }
 
 body {
@@ -31,16 +32,32 @@ header {
   padding: 1rem;
 }
 
-.div-btn-info {
-  display: flex;
-  justify-content: end;
+h1 {
+  font-size: 1.8rem;
+  text-align: center;
+  color: var(--colorH1);
+  text-decoration: underline;
+  margin-top: 1.5rem;
 }
 
-.btn_info {
-  background-image: url(/images/info.png);
-  padding: 0.65rem;
-  background-size: cover;
-  border-radius: 2rem;
+main {
+  flex-grow: 1;
+}
+
+h2 {
+  text-decoration: underline;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+h3 {
+  text-align: center;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 0.5rem;
 }
 
 .btn-easy {
@@ -53,72 +70,16 @@ header {
   justify-content: end;
 }
 
-.aciertos {
-  margin-bottom: 0.3rem;
-  list-style-image: url(./images/acierto.png);
-}
-
-.fallos {
-  list-style-image: url(./images/fallo.png);
-}
-
-main {
-  flex-grow: 1;
-}
-
-h1 {
-  font-size: 1.8rem;
-  text-align: center;
-  color: rgb(255, 0, 30);
-  text-decoration: underline;
-  margin-top: 1.5rem;
-}
-h2 {
-  text-decoration: underline;
-  margin-bottom: 1rem;
-  font-size: 1rem;
-}
-h3 {
-  text-align: center;
-}
-
-footer {
-  background-color: black;
-  color: white;
-  padding: 0.5rem;
-}
-
-.div-footer {
+.div-btn-info {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: end;
 }
 
-.div-footer ul {
-  display: flex;
-  margin-right: 1rem;
-  gap: 1rem;
-  align-items: center;
-}
-
-.div-footer ul li {
-  list-style: none;
-}
-
-.git-image {
-  width: 1.5rem;
-}
-
-.linkedin-image {
-  width: 1.5rem;
-}
-
-.youtube-image {
-  width: 1.5rem;
-}
-
-.footer-p {
-  margin-left: 1rem;
+.btn_info {
+  background-image: url(/images/info.png);
+  padding: 0.65rem;
+  background-size: cover;
+  border-radius: 2rem;
 }
 
 .superior {
@@ -135,6 +96,16 @@ footer {
   border-radius: 15%;
   border: ridge black 5px;
 }
+
+.aciertos {
+  margin-bottom: 0.3rem;
+  list-style-image: url(./images/acierto.png);
+}
+
+.fallos {
+  list-style-image: url(./images/fallo.png);
+}
+
 #rgb {
   color: white;
   padding: 3rem 1rem;
@@ -173,6 +144,18 @@ footer {
   z-index: 9999;
 }
 
+.message {
+  font-family: "Lilita One", cursive;
+  display: none;
+  background-color: black;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  animation: 4s ease-in-out;
+  text-align: center;
+  color:var(--colorH1);
+}
+
 .info-title {
   color: yellow;
   text-decoration: underline;
@@ -184,17 +167,49 @@ footer {
   margin-top: 2rem;
 }
 
-.message {
-  font-family: "Lilita One", cursive;
-  display: none;
-  background-color: black;
-  padding: 20px;
-  border-radius: 5px;
-  font-size: 18px;
-  animation: 4s ease-in-out;
-  text-align: center;
-  color: rgb(255, 0, 30);
+.div-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.footer-p {
+  margin-left: 1rem;
+}
+
+.git-image {
+  width: 1.5rem;
+}
+
+.linkedin-image {
+  width: 1.5rem;
+}
+
+.youtube-image {
+  width: 1.5rem;
+}
+
+.div-footer ul {
+  display: flex;
+  margin-right: 1rem;
+  gap: 1rem;
+  align-items: center;
+}
+
+.div-footer ul li {
+  list-style: none;
+}
+
+.dificultad{
+  color: black;
+  padding: 0.2rem;
+  border-radius: 1rem;
+  background-color: var(--colorH1);
+  font-weight: bold;
+  border: solid grey 0.1rem;
+}
+
+/*MEDIA QUERIES*/
 
 @keyframes fadeOut {
   0% {
@@ -320,6 +335,11 @@ footer {
   header {
     background-size: 15rem;
   }
+
+  .dificultad{
+    padding: 0.5rem;    
+  }
+
   h1 {
     font-size: 4rem;
   }
@@ -370,6 +390,12 @@ footer {
   header {
     background-size: contain;
   }
+
+  .dificultad{
+    padding: 0.7rem;    
+    font-size: 1rem;
+  }
+
   h1 {
     font-size: 5rem;
     text-align: center;
@@ -437,6 +463,12 @@ footer {
   header {
     background-size: contain;
   }
+
+  .dificultad{
+    padding: 1rem;    
+    font-size: 2rem;
+  }
+
   h1 {
     font-size: 7.5rem;
     text-align: center;
